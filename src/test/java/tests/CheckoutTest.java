@@ -13,9 +13,7 @@ public class CheckoutTest extends BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void setUp(){
-        driver.findElement(By.xpath("//nav/a[text()='Calendar']")).click();
-
-
+        //driver.findElement(By.xpath("//nav/a[text()='Calendar']")).click();
         driver.get("https://www.saucedemo.com/checkout-step-one.html");
         checkoutPage = new CheckoutPage(driver);
     }
@@ -31,6 +29,19 @@ public class CheckoutTest extends BaseTest {
 
         //check zip-code field is displayed
         Assert.assertTrue(checkoutPage.zipcode.isDisplayed());
+    }
+
+    @Test(testName = "US 309 - Add to cart")
+    public void test02(){
+
+        //add bike light to cart
+        checkoutPage.addBikeLight.click();
+
+        //click cart
+        checkoutPage.cart.click();
+
+        //compare text for bike light
+        Assert.assertEquals(checkoutPage.bikeLightItem, "Sauce Labs Bike Light");
     }
 
 }
