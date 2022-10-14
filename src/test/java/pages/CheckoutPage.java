@@ -18,10 +18,10 @@ public class CheckoutPage extends BasePage {
     }
 
     @FindBy(id = "first-name")
-    public WebElement firstNameTxt;
+    public WebElement firstNameField;
 
     @FindBy(id = "last-name")
-    public WebElement lastNameTxt;
+    public WebElement lastNameField;
 
     @FindBy(id = "postal-code")
     public WebElement zipcode;
