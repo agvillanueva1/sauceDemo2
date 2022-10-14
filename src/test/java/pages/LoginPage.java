@@ -26,5 +26,4 @@ public class LoginPage extends BasePage {
 
     @FindBy(id = "login-button")
     public WebElement loginBtn;
-    public WebElement thisIsTheTestThatINeed;
 }

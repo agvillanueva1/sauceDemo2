@@ -12,7 +12,6 @@ public class LoginTest extends BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() {
-        driver.findElement(By.xpath("//nav/a[text()='Calendar']")).click();
         //driver.findElement(By.xpath("//nav/a[text()='Calendar']")).click();
         loginPage = new LoginPage(driver);
     }
