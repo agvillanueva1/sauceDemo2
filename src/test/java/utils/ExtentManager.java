@@ -21,7 +21,7 @@ public class ExtentManager {
 
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter("target/report.html");
         sparkReporter.config().setTheme(Theme.STANDARD);
-        sparkReporter.config().setDocumentTitle("saucedemo");
+        sparkReporter.config().setDocumentTitle("sauceDemo2");
         sparkReporter.config().setReportName("Reports");
 
         extentReports.attachReporter(sparkReporter);
