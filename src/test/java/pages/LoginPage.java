@@ -26,4 +26,10 @@ public class LoginPage extends BasePage {
 
     @FindBy(id = "login-button")
     public WebElement loginBtn;
+
+    @FindBy(id = "shopping_cart_container")
+    public WebElement shoppingCartLogo;
+
+    @FindBy(xpath = "//*[contains(text(), 'Epic sadface: Sorry, this user has been locked out.')]")
+    public WebElement errorMsgForLockedOutUser;
 }
