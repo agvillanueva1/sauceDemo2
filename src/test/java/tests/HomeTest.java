@@ -15,4 +15,9 @@ public class HomeTest extends BaseTest {
 
         page = new HomePage(driver);
     }
+
+    @Test(testName = "sample")
+    public void test01 (){
+        System.out.println("Test");
+    }
 }
