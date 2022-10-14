@@ -2,6 +2,7 @@ package tests;
 
 import base.BaseTest;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -16,12 +17,7 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage(driver);
     }
 
-    @Test(testName = "US301 Verify standard_user can login with right password")
-    public void test01 (){
-        System.out.println("Test");
-    }
-
-    @Test(testName = "US302 ")
+    @Test(testName = "US301: Verify standard_user can login with right password ")
     public void test02() {
         //Input username
         loginPage.usernameField.sendKeys("standard_user");
@@ -31,6 +27,9 @@ public class LoginTest extends BaseTest {
 
         //Click login
         loginPage.loginBtn.click();
+
+        //Verify user is logged in by checking shopping cart logo
+        Assert.assertTrue(loginPage.shoppingCartLogo.isDisplayed());
 
     }
 }

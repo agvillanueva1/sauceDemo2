@@ -26,4 +26,7 @@ public class LoginPage extends BasePage {
 
     @FindBy(id = "login-button")
     public WebElement loginBtn;
+
+    @FindBy(id = "shopping_cart_container")
+    public WebElement shoppingCartLogo;
 }
