@@ -17,11 +17,20 @@ public class CheckoutPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(id = "add-to-cart-sauce-labs-bike-light")
+    public WebElement addBikeLight;
+
+    @FindBy(xpath = "shopping_cart_link")
+    public WebElement cart;
+
+    @FindBy(xpath = "//div[text()='Sauce Labs Bike Light']")
+    public WebElement bikeLightItem;
+
     @FindBy(id = "first-name")
-    public WebElement firstNameTxt;
+    public WebElement firstNameField;
 
     @FindBy(id = "last-name")
-    public WebElement lastNameTxt;
+    public WebElement lastNameField;
 
     @FindBy(id = "postal-code")
     public WebElement zipcode;
