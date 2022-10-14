@@ -41,7 +41,8 @@ public class CheckoutTest extends BaseTest {
         checkoutPage.cart.click();
 
         //compare text for bike light
-        Assert.assertEquals(checkoutPage.bikeLightItem, "Sauce Labs Bike Light");
+        String expected = checkoutPage.bikeLightItem.getText();
+        Assert.assertEquals(expected, "Sauce Labs Bike Light");
     }
 
 }
