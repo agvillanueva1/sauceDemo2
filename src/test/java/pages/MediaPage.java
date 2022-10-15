@@ -25,6 +25,7 @@ public class MediaPage extends BasePage {
     @FindBy(name = "login-button")
     public WebElement loginBtn;
 
+
     @FindBy(xpath = "//li")
     public List<WebElement> medias;
 }
