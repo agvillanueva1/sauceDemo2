@@ -21,8 +21,6 @@ public class MediaTest extends BaseTest {
 
     @Test(testName = "US 307 - Social media buttons. Verify there are 3 social media buttons are present: twitter, facebook and linkedIn")
     public void test01() {
-
-
         for (WebElement eachMedia : page.medias) {
             eachMedia.getText();
             Assert.assertTrue(eachMedia.isDisplayed());

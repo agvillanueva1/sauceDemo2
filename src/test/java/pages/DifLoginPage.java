@@ -8,24 +8,25 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class MediaPage extends BasePage {
+public class DifLoginPage extends BasePage {
     WebDriver driver;
 
-    public MediaPage(WebDriver driver) {
+    public DifLoginPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(id = "user-name")
-    public WebElement usernameInput;
+    public WebElement usernameField;
 
     @FindBy(id = "password")
-    public WebElement passwordInput;
+    public WebElement passwordField;
 
     @FindBy(name = "login-button")
     public WebElement loginBtn;
 
+    @FindBy(xpath = "//div[@class='inventory_item_img']")
+    public List<WebElement> images;
 
-    @FindBy(xpath = "//li")
-    public List<WebElement> medias;
 }
